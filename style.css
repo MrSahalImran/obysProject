@@ -4,20 +4,39 @@
     box-sizing: border-box;
     color:#fff;
     font-family: 'Plain Light';
+    background-color: #151515;
 }
 html, body{
     width: 100%;
     height: 100%;
 }
+
+
+
+#crsr{
+   height: 3vw;
+   width: 3vw;
+   border: 2px solid #d8d8d8;
+   background-color: transparent;
+   border-radius: 50%;
+   position: fixed;
+   z-index: 9999;
+   mix-blend-mode: difference;
+   transform: translate(-50%,-50%);
+}
+
+
+
 #loader{
     position: fixed;
     height: 100%;
     width: 100%;
     z-index: 999;
-    background-color: #030303;
+    background-color: #151515;
     padding: 15vh 10vw;
 }
 .line{
+    /* background-color: transparent; */
     width: 90vw;
     height: fit-content;
     overflow: hidden;
@@ -27,27 +46,32 @@ html, body{
     gap: 5vw;
 }
 #line-part1{
+    /* background-color: transparent; */
     display: flex;
     justify-content: center;
     align-items: center;
     gap:1vw
 }
 #line-part1 h5{
+    /* background-color: transparent; */
     width:5vw;
     text-align: right;
 }
 #line-part1 h5, #line-part1 h6 {
+    /* background-color: transparent; */
     font-family: 'silk serif';
     font-size: 3vw;
     font-weight: 100;
 }
 .line h1{
+    background-color: transparent;
     /* background-color: red; */
     font-size: 7vw;
     text-transform: uppercase;
     font-weight: 800;
 }
 .line h2{
+    background-color: transparent;
     height: 20vh;
     /* background-color: red; */
     font-size: 6.5vw;
@@ -58,7 +82,6 @@ html, body{
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
-
 @keyframes h2anime{
     0%{ 
         font-family: "plain light";
@@ -85,13 +108,226 @@ html, body{
         opacity: 0;
     }
 }
+
+
+
 main{
     position: relative;
     background-color: #111;
 }
+
+
+
+
 #page1{
     height: 100vh;
     width: 100%;
     background-color: #151515;
 }
+#page1 nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.2vw 5.1vw;
+    opacity: 0;
+}
 
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2.5vw
+}
+#nav-part2 h4{
+    font-size: 1vw ;
+    font-weight: 500;
+}
+.linepg1{
+    /* background-color: red; */
+    width: 54%;
+    margin-left: 21%;
+    overflow: hidden;
+    height: fit-content;
+    padding: 0 7vw;
+    /* background-color: red; */
+}
+.linepg1 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 7.5vw;
+}
+.linepg1:nth-child(2){
+    margin-top: 16vh;
+    position: relative;
+}
+#decor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 28%;
+}
+#decor h2{
+    text-decoration: underline ;
+    
+}
+#decor h2, h3{
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 200;
+    line-height: 7.5vw;
+}
+#decor h2:hover{
+    /* text-decoration: none; */
+    -webkit-text-stroke: .5px #fff;
+    text-decoration: underline transparent ;
+    font-weight: 100;
+    color: transparent;
+    transition: all ease 0.3s;
+}
+
+
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-top: 10vw;
+}
+#videoContainer{
+    height: 60vh;
+    width:70vw;
+    position:relative;
+    left: 29%;
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+}
+#videoContainer img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+#videoContainer video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#videoCrsr{
+    background-color: #ffa63d;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    position: absolute;
+    top: -9%;
+    left:70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+#videoCrsr i{
+    background-color: transparent;
+    font-size: 2vw;
+} 
+
+
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #323230;
+    position: relative;
+}
+
+
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #141414;
+    padding: 5vh 0;
+}
+#page4-content{
+    width: 71vw;
+    margin-left: 28%;
+    position: relative;
+    /* background-color: red; */
+
+}
+#page4-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+
+}
+#page4-content .underline{
+    height: 1.5px;
+    width: 100%;
+    background-color: #b4b4b4;
+    margin: 4.5vw 0;
+}
+#page4-content>p{
+    width: 80%;
+    font-size: 2.3vw;
+}
+#page4-flex{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    margin-top: 5vw;
+    /* background-color: red; */
+    gap: 2vw;
+}
+#page4-flex p{
+    width: 25%;
+    font-family: 'plain light';
+    font-size: .95vw;
+    font-weight: 500;
+    line-height: 1.5vw;
+    /* text-transform: capitalize; */
+}
+#page4-flex img{
+    width: 47%;
+    /* height: 20%; */
+    object-fit: cover;
+}
+#page4-blue{
+    width: 33vw;
+    /* height: fit-content; */
+    background-color: rgb(63, 125, 244);
+    padding: 4.5vh 3.5vw;
+    position: relative;
+    margin-top:-30vh;
+    margin-left:32.5%
+}
+.bluelinerow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(205, 205, 205);
+    background-color: transparent;
+    padding: 2.5vw 0;
+}
+.bluelinerow:last-child{
+    margin-bottom: 7vh;
+}
+.bluelinerow>h4{
+    background-color: transparent;
+    font-size: 1.7vw;
+    font-weight: 500;
+    /* margin-bottom: 5vh; */
+}
+.bluelinerow>p{
+    background-color: transparent;
+    width: 35%;
+    font-size: 1vw;
+    /* margin-bottom: 5vh; */
+}
+
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    /* position: relative; */
+    padding: 5vw 0;
+}
