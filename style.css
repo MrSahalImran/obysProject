@@ -50,7 +50,8 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:1vw
+    gap:1vw;
+    position: relative;
 }
 #line-part1 h5{
     /* background-color: transparent; */
@@ -149,6 +150,7 @@ main{
     overflow: hidden;
     height: fit-content;
     padding: 0 7vw;
+    /* position: relative; */
     /* background-color: red; */
 }
 .linepg1 h1{
@@ -156,6 +158,10 @@ main{
     text-transform: uppercase;
     font-weight: 500;
     line-height: 7.5vw;
+}
+#linepg1 h1:first-child(2)::before{
+    content: "01";
+    position: absolute;
 }
 .linepg1:nth-child(2){
     margin-top: 16vh;
@@ -258,7 +264,16 @@ main{
 #page4-content h1{
     font-size: 7vw;
     text-transform: uppercase;
-
+    
+}
+#page4-content h1::before{
+    content:"03";
+    font-size: 3.3vw;
+    font-family: 'silk serif';
+    position: absolute;
+    margin-left:-15% ;
+    margin-top: 1%;
+    font-weight: 300;
 }
 #page4-content .underline{
     height: 1.5px;
@@ -328,6 +343,137 @@ main{
 #page5{
     min-height: 100vh;
     width: 100%;
-    /* position: relative; */
+    position: relative;
     padding: 5vw 0;
+}
+.elem{
+    overflow: hidden ;
+    white-space: nowrap;
+    height: max-content;
+    /* display: inline-block; */
+    /* background-color: red; */
+}
+.elem h1{
+    display: inline-block;
+    font-size: 8vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: .08vw #fff;
+    color: transparent;
+    font-weight: 400;
+    margin-right: 16px;
+    animation-name: marqueeAnime;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    font-family: 'silk serif';
+    line-height: 8vw;
+}
+@keyframes marqueeAnime{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+.elem2{
+    overflow: hidden ;
+    white-space: nowrap;
+    /* display: inline-block; */
+    /* background-color: red; */
+}
+.elem2 h1{
+    display: inline-block;
+    font-size: 8vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: .08vw #fff;
+    color: transparent;
+    font-weight: 400;
+    margin-right: 16px;
+    transform: translateX(calc(-100% - 20px));
+    animation-name: marqueeAnime;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    line-height: 8vw;
+}
+
+
+
+footer{
+    height: 100vh;
+    width: 100%;
+    background-color: #141414;
+    padding: 5vh 0;
+    position: relative;
+}
+#footer-content{
+    margin-left: 28%;
+    position: relative;
+}
+#footer-content h1{
+    font-size: 7.1vw;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#footer-content h1::before{
+    content:"04";
+    position: absolute;
+    font-size:3.3vw ;
+    font-family: 'silk serif';
+    left:-13%;
+    font-weight: 300;
+    top:1.2%
+}
+#footer-content .underline{
+    height: 1.5px;
+    width: 100%;
+    background-color: #b4b4b4;
+    margin: 4vw 0;
+    margin-bottom: 2vw;
+}
+#footer-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.div-flex-content{
+    /* background-color: red !important; */
+    width: 30%;
+    height: 24.4vw;
+    /* padding-bottom:vw; */
+}
+.div-flex-content h4{
+    font-size: 1.2vw;
+    font-weight: 600;
+    text-transform: capitalize;
+    /* margin-bottom: 1vw; */
+    padding: 4vw 0;
+    /* background-color: red; */
+
+}
+.div-flex-content h2{
+    font-weight: 500;
+    font-size: 1.8vw;
+    line-height: 2vw;
+    /* width: 30%; */
+    transition: all ease 0.3s;
+}
+.div-flex-content h2:hover{
+
+    color: #bbbbbb;
+}
+#email{
+    border-bottom: 3px solid #fff;
+}
+#email:hover{
+    border-bottom: 3px solid transparent;
+}
+#footer-bottom h2{
+    font-size: 1vw;
+    font-weight: 500;
+    /* line-height: 2vw; */
+    /* width: 30%; */
+    padding-bottom: 1.8vw;
 }
